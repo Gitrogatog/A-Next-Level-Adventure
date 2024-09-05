@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="NPCInfoResource" load_steps=6 format=3 uid="uid://c3quwi1bdib7k"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/DialogStorageResource.cs" id="1_0kl0m"]
+[ext_resource type="Script" path="res://Scripts/Resources/NPCInfoResource.cs" id="2_mq6cm"]
+[ext_resource type="Texture2D" uid="uid://s85q3w5gwtge" path="res://Art/bount-white/Creatures.png" id="3_lbdky"]
+
+[sub_resource type="Resource" id="Resource_x2i4n"]
+script = ExtResource("1_0kl0m")
+ExportedData = Array[PackedStringArray]([PackedStringArray("A powerful barrier blocks your path.")])
+useQuotes = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5fwbq"]
+atlas = ExtResource("3_lbdky")
+region = Rect2(90, 90, 10, 10)
+
+[resource]
+script = ExtResource("2_mq6cm")
+name = "triangle"
+displayName = "Barrier"
+killName = ""
+power = 2500
+displayPower = true
+texture = SubResource("AtlasTexture_5fwbq")
+color = Color(0.968627, 0.768627, 0.223529, 1)
+hurtColor = Color(1, 1, 1, 1)
+dialog = SubResource("Resource_x2i4n")

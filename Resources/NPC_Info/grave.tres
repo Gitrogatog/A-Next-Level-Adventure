@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="NPCInfoResource" load_steps=6 format=3 uid="uid://dp3cwp2fy6phu"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/DialogStorageResource.cs" id="1_8sglw"]
+[ext_resource type="Script" path="res://Scripts/Resources/NPCInfoResource.cs" id="2_6ja8b"]
+[ext_resource type="Texture2D" uid="uid://s85q3w5gwtge" path="res://Art/bount-white/Creatures.png" id="3_etw14"]
+
+[sub_resource type="Resource" id="Resource_12x0i"]
+script = ExtResource("1_8sglw")
+ExportedData = Array[PackedStringArray]([PackedStringArray("When you find the secret entrance, step forth with confidence, for neither wall nor water can stop you."), PackedStringArray("In 934, the vile dragon Tuzok razed Townsville, took over Crowrook Castle and reigned terror over Numland."), PackedStringArray("But then, a legendary hero armed with a magic sword emerged from humble beginnings to slay the vile lizard."), PackedStringArray("Their battle was epic, and really cool, but once the dragon was slain the hero and his sword slipped into myth."), PackedStringArray("The castle was rebuilt in the year 951. However, in case the castle was once again taken over by evil..."), PackedStringArray("A secret entrance was built into the castle itself, with the details hidden in the tombstones..."), PackedStringArray("...northwest section of the castle..."), PackedStringArray("...north side of the fence..."), PackedStringArray("...7th piece of fence from the left..."), PackedStringArray("...marked by the yellow bricks..."), PackedStringArray("Too strong... too fast...", "Numland is best without men such as I...")])
+useQuotes = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vo5b3"]
+atlas = ExtResource("3_etw14")
+region = Rect2(90, 40, 10, 10)
+
+[resource]
+script = ExtResource("2_6ja8b")
+name = "grave"
+displayName = "Grave"
+killName = ""
+power = 130
+displayPower = false
+texture = SubResource("AtlasTexture_vo5b3")
+color = Color(0.572549, 0.6, 0.572549, 1)
+hurtColor = Color(1, 1, 1, 1)
+dialog = SubResource("Resource_12x0i")

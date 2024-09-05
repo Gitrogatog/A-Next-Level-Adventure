@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="NPCInfoResource" load_steps=6 format=3 uid="uid://cs3b6vb3a553k"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/DialogStorageResource.cs" id="1_nk423"]
+[ext_resource type="Script" path="res://Scripts/Resources/NPCInfoResource.cs" id="2_4yifs"]
+[ext_resource type="Texture2D" uid="uid://s85q3w5gwtge" path="res://Art/bount-white/Creatures.png" id="3_prnsb"]
+
+[sub_resource type="Resource" id="Resource_j4vki"]
+script = ExtResource("1_nk423")
+ExportedData = Array[PackedStringArray]([PackedStringArray("You swing at the smile... and miss! The smile hums a happy little tune.", "You swing at the smile... and miss! The smile nods in quiet understanding.", "You swing at the smile... and miss! The smile fills the room with a sense of joy and childish whimsy.", "You can\'t swing any more... the smile turns to you and smiles."), PackedStringArray("welcome back.... im just enjoying hte lake...", "do oyu like the music??? i wrote it myself!!!", "so much water... so cool...."), PackedStringArray("ty for playing!!!! nice job beating the game", "btw we smilies are invincible :D hardcoded as such"), PackedStringArray("these arrows... what could they mean???"), PackedStringArray("here we are together... at love island..."), PackedStringArray("you freed us!!! ty!!!!", "now i can travel the world with my best friend locky!!!", "lets go!!! locky!!!!!"), PackedStringArray("welcome to my sculpture park.... please browse the artworks at your leisure....", "who made the sculptures? why me of course....", "the park is free to enter but if you like what you see, well...", "i do have a patreon. please consider donating."), PackedStringArray("do i dare enter... the friend maze????", "hmm... what could be at the end???", "are u planning on going in urself???", "then plz remember... ", "IF YOU DIE IN THE MAZE YOU DIE IN REAL LIFE!!!!"), PackedStringArray("my friend is trapped on the other side of the barrier...", "if only there were some way to get across... but ill never be lv 4000 enough..."), PackedStringArray("you saved me!!!", "but locky is trapped forever...", "oh well"), PackedStringArray(":D"), PackedStringArray("this is the end of the game i guess.... (for real this time)", "ty for playing all the way to the end!!!", "theres no end screen.... too lazy... sorry...", "you can close the game window..... you know, if you want to..."), PackedStringArray("Credits:", "This game was made by Roberto (aka Gitrogatog). That\'s me!", "Playtested by Ary, Dante, Ishan, Joey, Simon, Tom, and some members of the Seattle Indies group.", "Thank you all, and everyone else who gave feedback!!!!", "It was made in the Godot engine.", "I used MoonTools ECS, it\'s pretty cool! Check it out if you can.", "Art is from the Bountiful Bits art pack, by VEXED.", "Font is monogram, by Datagoblin.", "Some of the UI is from Frames 1-Bit, by Piiixl.", "Music and sound effects are all me!", "Thanks again for everyone who gave feedback on my project, and thank you for playing!")])
+useQuotes = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jn14t"]
+atlas = ExtResource("3_prnsb")
+region = Rect2(110, 40, 10, 10)
+
+[resource]
+script = ExtResource("2_4yifs")
+name = "smile"
+displayName = "Smile"
+killName = ""
+power = -1
+displayPower = false
+texture = SubResource("AtlasTexture_jn14t")
+color = Color(1, 1, 1, 1)
+hurtColor = Color(1, 1, 1, 1)
+dialog = SubResource("Resource_j4vki")

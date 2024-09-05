@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="NPCInfoResource" load_steps=6 format=3 uid="uid://cq32abgg6g0b5"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/DialogStorageResource.cs" id="1_21m1r"]
+[ext_resource type="Script" path="res://Scripts/Resources/NPCInfoResource.cs" id="2_gelfm"]
+[ext_resource type="Texture2D" uid="uid://s85q3w5gwtge" path="res://Art/bount-white/Creatures.png" id="3_adtob"]
+
+[sub_resource type="Resource" id="Resource_vyjue"]
+script = ExtResource("1_21m1r")
+ExportedData = Array[PackedStringArray]([PackedStringArray("It\'s a tree?")])
+useQuotes = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2e84m"]
+atlas = ExtResource("3_adtob")
+region = Rect2(100, 60, 10, 10)
+
+[resource]
+script = ExtResource("2_gelfm")
+name = "m_tree"
+displayName = "Tree?"
+killName = "Mimic Tree"
+power = 35
+displayPower = false
+texture = SubResource("AtlasTexture_2e84m")
+color = Color(0.8, 0.556863, 0.298039, 1)
+hurtColor = Color(1, 1, 1, 1)
+dialog = SubResource("Resource_vyjue")

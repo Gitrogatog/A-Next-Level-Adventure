@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="NPCInfoResource" load_steps=6 format=3 uid="uid://c8wxtyqr6g6lw"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/DialogStorageResource.cs" id="1_r4kvu"]
+[ext_resource type="Script" path="res://Scripts/Resources/NPCInfoResource.cs" id="2_045yl"]
+[ext_resource type="Texture2D" uid="uid://s85q3w5gwtge" path="res://Art/bount-white/Creatures.png" id="3_wa2hh"]
+
+[sub_resource type="Resource" id="Resource_qwhoy"]
+script = ExtResource("1_r4kvu")
+ExportedData = Array[PackedStringArray]([PackedStringArray("You found a magic battle axe!", "But you use swords, not axes... this would completely mess up your build.", "You try picking it up... you can hardly even lift it!", "You check the weapon requirements... 25 Strength??? How the hell are you supposed to get it that high???")])
+useQuotes = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g0acx"]
+atlas = ExtResource("3_wa2hh")
+region = Rect2(70, 60, 10, 10)
+
+[resource]
+script = ExtResource("2_045yl")
+name = "axe"
+displayName = "Battle Axe"
+killName = ""
+power = 100
+displayPower = false
+texture = SubResource("AtlasTexture_g0acx")
+color = Color(1, 1, 1, 1)
+hurtColor = Color(0.682353, 0.215686, 0.215686, 1)
+dialog = SubResource("Resource_qwhoy")

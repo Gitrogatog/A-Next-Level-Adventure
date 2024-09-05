@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="NPCInfoResource" load_steps=6 format=3 uid="uid://b70v0yjffu15y"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/DialogStorageResource.cs" id="1_rprpa"]
+[ext_resource type="Script" path="res://Scripts/Resources/NPCInfoResource.cs" id="2_45wyw"]
+[ext_resource type="Texture2D" uid="uid://esqclvnbd68w" path="res://Art/bount-white/Gems-Jewels-and-Money.png" id="3_pr6b1"]
+
+[sub_resource type="Resource" id="Resource_1iqx1"]
+script = ExtResource("1_rprpa")
+ExportedData = Array[PackedStringArray]([PackedStringArray("")])
+useQuotes = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y1hab"]
+atlas = ExtResource("3_pr6b1")
+region = Rect2(0, 20, 10, 10)
+
+[resource]
+script = ExtResource("2_45wyw")
+name = "goldbar"
+displayName = "Gold Bar"
+killName = ""
+power = 0
+displayPower = false
+texture = SubResource("AtlasTexture_y1hab")
+color = Color(0.968627, 0.768627, 0.223529, 1)
+hurtColor = Color(1, 1, 1, 1)
+dialog = SubResource("Resource_1iqx1")

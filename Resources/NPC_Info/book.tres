@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="NPCInfoResource" load_steps=6 format=3 uid="uid://vc4d33qleqcb"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/DialogStorageResource.cs" id="1_8fkyr"]
+[ext_resource type="Script" path="res://Scripts/Resources/NPCInfoResource.cs" id="2_vlon7"]
+[ext_resource type="Texture2D" uid="uid://s85q3w5gwtge" path="res://Art/bount-white/Creatures.png" id="3_rft8a"]
+
+[sub_resource type="Resource" id="Resource_a2cy1"]
+script = ExtResource("1_8fkyr")
+ExportedData = Array[PackedStringArray]([PackedStringArray("To defeat your enemy, you must first have the higher number.", "-Sun Tzu, \"The Art of War\""), PackedStringArray("This is a book about walruses:", "Which came first, the dragon or the walrus? This question has stumped researchers for centuries.", "Early records of the existance of walruses are rare, the earliest being in the year 271 by Julia Garnet.", "However, it\'s possible that even earlier records of walruses were mistaken for mermaids by sailors.", "(Although most mermaids would likely take offense to that comparison)"), PackedStringArray("Soon after defeating the dragon, the great hero left Numland.", "He wanted to protect this town and its people... from himself.", "Many years later, his body was brought back to Numland.", "No one knew the cause of his death.", "According to his will, he was buried in a peaceful grove next to the Townsville graveyard.", "His last words were written on his tombstone, although no one knows who he meant them for..."), PackedStringArray("This is a book about dragons.", "Dragons are known as vile scheming lizards who destroy cities to fill their hoard with ill-gotten gold.", "In reality, most dragons are quite well-mannered, generally living alone on mountaintops.", "Dragons will only attack humans when very hungry or (more likely) when caught stealing from their horde.", "However in recent years, dragon territory has dwindled due to the spread of human settlements.", "This has forced dragons into direct conflict over smaller and smaller patches of land.", "The loser of these conflicts is forced to leave in search of new lands, often leading them to human territory.", "Castles are a common choice for their new lair, due to their similarity to mountain caves,", "As well as providing easy access to treasure from the treasury to form a new horde."), PackedStringArray("Diary entry 1: I\'ve finally set up my own forest cottage resort! This has been my dream for decades!", "Wilderness lovers like me will have the ultimate vacation destination... I\'m so happy", "The haters said it couldn\'t be done, that you couldn\'t protect guests from the dangers lurking in the forest...", "But they didn\'t think I\'d be able to hire the legendary hero to protect our guests either!", "Haha! The joke\'s on them!"), PackedStringArray("Diary 15: My resort has been a smashing success! Since opening, hundreds have been clamoring for my cabins!", "With the great hero protecting us, this resort will stand tall, above all other resorts!", "An unflinching beacon of hope to all other wilderness getaways!", "A wonderful vacation destination for all, untouched by the passage of time!", "Allow the murmuring streams and the wind blowing through the trees to calm your soul... Forever!"), PackedStringArray("Diary 63: Today I woke up, and the great hero was missing from his usual post.", "I checked the entire resort for him, and he was nowhere to be found! ", "And no one in Townsville said they had seen him around...", "I hope he just took a stroll through the forest for a bit... I hope..."), PackedStringArray("Diary 87: Great hero... where did you go?"), PackedStringArray("Diary 58: Today\'s the day the statue of the hero I commisioned was finally completed!", "The hero has done so much for our town... and for me! This is the best way we could give our thanks.", "Besides, the hero has been seeming pretty down recently... I hoped the statue would help lift his spirits.", "I made sure the hero was present before unveiling the statue in the town square, to grand applause!", "All the townsfolk loved it, but the hero didn\'t seem too thrilled...", "But I\'m sure he\'ll come around to it eventually!")])
+useQuotes = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8otu5"]
+atlas = ExtResource("3_rft8a")
+region = Rect2(70, 110, 10, 10)
+
+[resource]
+script = ExtResource("2_vlon7")
+name = "book"
+displayName = "Book"
+killName = ""
+power = 100
+displayPower = false
+texture = SubResource("AtlasTexture_8otu5")
+color = Color(0.8, 0.556863, 0.298039, 1)
+hurtColor = Color(1, 1, 1, 1)
+dialog = SubResource("Resource_a2cy1")

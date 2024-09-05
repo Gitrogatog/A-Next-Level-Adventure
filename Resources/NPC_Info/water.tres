@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="NPCInfoResource" load_steps=6 format=3 uid="uid://ddd16xksq7inj"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/DialogStorageResource.cs" id="1_kaqms"]
+[ext_resource type="Script" path="res://Scripts/Resources/NPCInfoResource.cs" id="2_o4ulc"]
+[ext_resource type="Texture2D" uid="uid://s85q3w5gwtge" path="res://Art/bount-white/Creatures.png" id="3_hg7hs"]
+
+[sub_resource type="Resource" id="Resource_3ayqi"]
+script = ExtResource("1_kaqms")
+ExportedData = Array[PackedStringArray]([PackedStringArray("")])
+useQuotes = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r2ebc"]
+atlas = ExtResource("3_hg7hs")
+region = Rect2(30, 110, 10, 10)
+
+[resource]
+script = ExtResource("2_o4ulc")
+name = "water"
+displayName = "Water"
+killName = ""
+power = 0
+displayPower = false
+texture = SubResource("AtlasTexture_r2ebc")
+color = Color(0.388235, 0.607843, 1, 1)
+hurtColor = Color(1, 1, 1, 1)
+dialog = SubResource("Resource_3ayqi")

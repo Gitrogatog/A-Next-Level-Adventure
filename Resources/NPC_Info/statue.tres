@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="NPCInfoResource" load_steps=6 format=3 uid="uid://bqsajrt0e23ls"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/DialogStorageResource.cs" id="1_1lh1y"]
+[ext_resource type="Script" path="res://Scripts/Resources/NPCInfoResource.cs" id="2_030fj"]
+[ext_resource type="Texture2D" uid="uid://s85q3w5gwtge" path="res://Art/bount-white/Creatures.png" id="3_q1t25"]
+
+[sub_resource type="Resource" id="Resource_gpwer"]
+script = ExtResource("1_1lh1y")
+ExportedData = Array[PackedStringArray]([PackedStringArray("The great hero of legend. He did... something important.", "Probably.")])
+useQuotes = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lrocm"]
+atlas = ExtResource("3_q1t25")
+region = Rect2(80, 80, 10, 10)
+
+[resource]
+script = ExtResource("2_030fj")
+name = "statue"
+displayName = "Statue"
+killName = ""
+power = 80
+displayPower = true
+texture = SubResource("AtlasTexture_lrocm")
+color = Color(0.572549, 0.6, 0.572549, 1)
+hurtColor = Color(1, 1, 1, 1)
+dialog = SubResource("Resource_gpwer")

@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="NPCInfoResource" load_steps=6 format=3 uid="uid://ct5pfklx82nwa"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/DialogStorageResource.cs" id="1_agyk0"]
+[ext_resource type="Script" path="res://Scripts/Resources/NPCInfoResource.cs" id="1_qy82r"]
+[ext_resource type="Texture2D" uid="uid://s85q3w5gwtge" path="res://Art/bount-white/Creatures.png" id="3_f0tyq"]
+
+[sub_resource type="Resource" id="Resource_ic4dm"]
+script = ExtResource("1_agyk0")
+ExportedData = Array[PackedStringArray]([PackedStringArray("The wolf growls at you. It seems to be guarding something...")])
+useQuotes = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ag20u"]
+atlas = ExtResource("3_f0tyq")
+region = Rect2(0, 50, 10, 10)
+
+[resource]
+script = ExtResource("1_qy82r")
+name = "wolf"
+displayName = "Wolf"
+killName = ""
+power = 17
+displayPower = true
+texture = SubResource("AtlasTexture_ag20u")
+color = Color(0.572549, 0.6, 0.572549, 1)
+hurtColor = Color(0.682353, 0.215686, 0.215686, 1)
+dialog = SubResource("Resource_ic4dm")

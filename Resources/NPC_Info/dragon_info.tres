@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="NPCInfoResource" load_steps=6 format=3 uid="uid://e2o3kvowdujb"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/DialogStorageResource.cs" id="1_np1aw"]
+[ext_resource type="Script" path="res://Scripts/Resources/NPCInfoResource.cs" id="2_ddoge"]
+[ext_resource type="Texture2D" uid="uid://s85q3w5gwtge" path="res://Art/bount-white/Creatures.png" id="3_bp7w4"]
+
+[sub_resource type="Resource" id="Resource_orak6"]
+script = ExtResource("1_np1aw")
+ExportedData = Array[PackedStringArray]([PackedStringArray("Mwahaha! Foolish hero! I can see right through your miserable excuse for a disguise!", "I know of your pathetic plan to try and defeat me.", "Well, give it up! I am the strongest in all the land! Completely invincible!", "Your legend of the \'ancient hero\' is mere fantasy! Myth! Not even the legendary sword could stop me!", "I shall rule this land with an iron... uh... tail! Yes, with an iron tail!!!", "Now begone, lest I quit gloating and turn you into a walrus!")])
+useQuotes = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mrx50"]
+atlas = ExtResource("3_bp7w4")
+region = Rect2(60, 30, 10, 10)
+
+[resource]
+script = ExtResource("2_ddoge")
+name = "dragon"
+displayName = "Dragon"
+killName = ""
+power = 160
+displayPower = true
+texture = SubResource("AtlasTexture_mrx50")
+color = Color(0.207843, 0.698039, 0.227451, 1)
+hurtColor = Color(1, 1, 1, 1)
+dialog = SubResource("Resource_orak6")

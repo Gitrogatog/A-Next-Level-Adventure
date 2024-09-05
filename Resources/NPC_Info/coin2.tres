@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="NPCInfoResource" load_steps=6 format=3 uid="uid://r56wlhhm4o88"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/DialogStorageResource.cs" id="1_24gxg"]
+[ext_resource type="Script" path="res://Scripts/Resources/NPCInfoResource.cs" id="2_y6re7"]
+[ext_resource type="Texture2D" uid="uid://esqclvnbd68w" path="res://Art/bount-white/Gems-Jewels-and-Money.png" id="3_05vu6"]
+
+[sub_resource type="Resource" id="Resource_nkirl"]
+script = ExtResource("1_24gxg")
+ExportedData = Array[PackedStringArray]([PackedStringArray("")])
+useQuotes = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g72x1"]
+atlas = ExtResource("3_05vu6")
+region = Rect2(10, 10, 10, 10)
+
+[resource]
+script = ExtResource("2_y6re7")
+name = "coin2"
+displayName = "Coins"
+killName = ""
+power = 0
+displayPower = false
+texture = SubResource("AtlasTexture_g72x1")
+color = Color(0.968627, 0.768627, 0.223529, 1)
+hurtColor = Color(1, 1, 1, 1)
+dialog = SubResource("Resource_nkirl")

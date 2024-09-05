@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="NPCInfoResource" load_steps=6 format=3 uid="uid://3a1xvafwhoay"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/DialogStorageResource.cs" id="1_qkr6a"]
+[ext_resource type="Script" path="res://Scripts/Resources/NPCInfoResource.cs" id="2_pp4d1"]
+[ext_resource type="Texture2D" uid="uid://s85q3w5gwtge" path="res://Art/bount-white/Creatures.png" id="3_0kgju"]
+
+[sub_resource type="Resource" id="Resource_h4yf4"]
+script = ExtResource("1_qkr6a")
+ExportedData = Array[PackedStringArray]([PackedStringArray("You swing at the eye... and miss! The eye doesn\'t even blink.", "You swing at the eye... and miss! The eye stares at something a few miles behind you.", "You swing at the eye... and miss! The eye rolls with annoyance.", "You challenge the eye to a staring contest... and lose.")])
+useQuotes = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vbm60"]
+atlas = ExtResource("3_0kgju")
+region = Rect2(60, 50, 10, 10)
+
+[resource]
+script = ExtResource("2_pp4d1")
+name = "eye"
+displayName = "Evil Eye"
+killName = ""
+power = 30
+displayPower = true
+texture = SubResource("AtlasTexture_vbm60")
+color = Color(1, 0.313726, 0.211765, 1)
+hurtColor = Color(1, 1, 1, 1)
+dialog = SubResource("Resource_h4yf4")

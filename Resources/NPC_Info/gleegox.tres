@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="NPCInfoResource" load_steps=6 format=3 uid="uid://ccb3vgjpecrbn"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/DialogStorageResource.cs" id="1_vcslo"]
+[ext_resource type="Script" path="res://Scripts/Resources/NPCInfoResource.cs" id="2_tqsc1"]
+[ext_resource type="Texture2D" uid="uid://s85q3w5gwtge" path="res://Art/bount-white/Creatures.png" id="3_k7nrn"]
+
+[sub_resource type="Resource" id="Resource_w5db3"]
+script = ExtResource("1_vcslo")
+ExportedData = Array[PackedStringArray]([PackedStringArray("You swing at the gleegox... and miss! The gleegox asks to be taken to your leader.", "You swing at the gleegox... and miss! The gleegox scans the area for any real threats to its invasion.", "You swing at the gleegox... and miss! The gleegox reiterates that resistance is futile.", "The gleegox reconsiders its plan to enslave humanity, given how pathetic you all are.", "The gleegox sends a request to its overlord to be restationed on a more interesting planet.")])
+useQuotes = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_feg16"]
+atlas = ExtResource("3_k7nrn")
+region = Rect2(30, 90, 10, 10)
+
+[resource]
+script = ExtResource("2_tqsc1")
+name = "alien"
+displayName = "Gleegox"
+killName = ""
+power = 71
+displayPower = true
+texture = SubResource("AtlasTexture_feg16")
+color = Color(0.207843, 0.698039, 0.227451, 1)
+hurtColor = Color(1, 1, 1, 1)
+dialog = SubResource("Resource_w5db3")

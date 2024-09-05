@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="NPCInfoResource" load_steps=6 format=3 uid="uid://dp34p8ndr15ub"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/DialogStorageResource.cs" id="1_18eaa"]
+[ext_resource type="Script" path="res://Scripts/Resources/NPCInfoResource.cs" id="2_ao8te"]
+[ext_resource type="Texture2D" uid="uid://bnyajlmqpo4go" path="res://Art/bount-white/Weapons.png" id="3_w5qk6"]
+
+[sub_resource type="Resource" id="Resource_4a3tr"]
+script = ExtResource("1_18eaa")
+ExportedData = Array[PackedStringArray]([PackedStringArray("It\'s completely stuck in the stone!")])
+useQuotes = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2o6j7"]
+atlas = ExtResource("3_w5qk6")
+region = Rect2(60, 0, 10, 10)
+
+[resource]
+script = ExtResource("2_ao8te")
+name = "sword"
+displayName = "Sword"
+killName = "Sword of Ancient Legend"
+power = 80
+displayPower = false
+texture = SubResource("AtlasTexture_2o6j7")
+color = Color(0, 1, 1, 1)
+hurtColor = Color(1, 1, 1, 1)
+dialog = SubResource("Resource_4a3tr")

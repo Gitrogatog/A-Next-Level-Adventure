@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="NPCInfoResource" load_steps=6 format=3 uid="uid://dffvcgxux86y6"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/DialogStorageResource.cs" id="1_me2na"]
+[ext_resource type="Script" path="res://Scripts/Resources/NPCInfoResource.cs" id="2_diaf1"]
+[ext_resource type="Texture2D" uid="uid://s85q3w5gwtge" path="res://Art/bount-white/Creatures.png" id="3_5db3t"]
+
+[sub_resource type="Resource" id="Resource_tvmc5"]
+script = ExtResource("1_me2na")
+ExportedData = Array[PackedStringArray]([PackedStringArray("You swing at the gargad... and miss! The gargad stares off into space.", "You swing at the gargad... and miss! A bit of green saliva drools out of the gargad\'s mouth.", "You swing at the gargad... and miss! The gargad blinks, one eye at a time.", "You swing at the gargad... and miss! The gargard tries scratching its back with its hind... leg?", "You swing at hte gargad... and miss! The gargad seems to be thinking about home.")])
+useQuotes = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e4q1o"]
+atlas = ExtResource("3_5db3t")
+region = Rect2(40, 90, 10, 10)
+
+[resource]
+script = ExtResource("2_diaf1")
+name = "alien2"
+displayName = "Gargad"
+killName = ""
+power = 72
+displayPower = true
+texture = SubResource("AtlasTexture_e4q1o")
+color = Color(0.301961, 0.831373, 0.392157, 1)
+hurtColor = Color(1, 1, 1, 1)
+dialog = SubResource("Resource_tvmc5")

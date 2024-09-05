@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="NPCInfoResource" load_steps=6 format=3 uid="uid://rc0rl4bwry0t"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/DialogStorageResource.cs" id="1_316u1"]
+[ext_resource type="Script" path="res://Scripts/Resources/NPCInfoResource.cs" id="2_0pvfn"]
+[ext_resource type="Texture2D" uid="uid://s85q3w5gwtge" path="res://Art/bount-white/Creatures.png" id="3_gt2eg"]
+
+[sub_resource type="Resource" id="Resource_ug35t"]
+script = ExtResource("1_316u1")
+ExportedData = Array[PackedStringArray]([PackedStringArray("Welcome to Monster Town! As you can see, the exit is to the east, so USE IT!"), PackedStringArray("Hint: The best way to deal with monsters is to lie face down on the floor in front of them."), PackedStringArray("Monsters rule, humans drool!!!"), PackedStringArray("Hint: There is no way to defeat the wizard who controls these caves, so give up already!"), PackedStringArray("There is no Key of Yendor."), PackedStringArray("This cave is claimed by the glorious gleegox empire! Surrender or be annihilated!!!")])
+useQuotes = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_leinc"]
+atlas = ExtResource("3_gt2eg")
+region = Rect2(130, 70, 10, 10)
+filter_clip = true
+
+[resource]
+script = ExtResource("2_0pvfn")
+name = "m_sign"
+displayName = "Sign?"
+killName = "Mimic Sign"
+power = 80
+displayPower = false
+texture = SubResource("AtlasTexture_leinc")
+color = Color(0.635294, 0.380392, 0.203922, 1)
+hurtColor = Color(1, 1, 1, 1)
+dialog = SubResource("Resource_ug35t")

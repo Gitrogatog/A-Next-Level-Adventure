@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="NPCInfoResource" load_steps=6 format=3 uid="uid://crjhujkxd0p1o"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/DialogStorageResource.cs" id="1_2chsn"]
+[ext_resource type="Script" path="res://Scripts/Resources/NPCInfoResource.cs" id="2_ytxwx"]
+[ext_resource type="Texture2D" uid="uid://s85q3w5gwtge" path="res://Art/bount-white/Creatures.png" id="3_37ghp"]
+
+[sub_resource type="Resource" id="Resource_b1ysp"]
+script = ExtResource("1_2chsn")
+ExportedData = Array[PackedStringArray]([PackedStringArray("The fox stares at you with a piercing glare. You stare back.", "The fox blinks. You won!", "You bask in the glory at having beaten an animal at a staring contest.")])
+useQuotes = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ho2j2"]
+atlas = ExtResource("3_37ghp")
+region = Rect2(10, 0, 10, 10)
+
+[resource]
+script = ExtResource("2_ytxwx")
+name = "fox"
+displayName = "Fox"
+killName = ""
+power = 9
+displayPower = true
+texture = SubResource("AtlasTexture_ho2j2")
+color = Color(1, 0.313726, 0.211765, 1)
+hurtColor = Color(1, 1, 1, 1)
+dialog = SubResource("Resource_b1ysp")

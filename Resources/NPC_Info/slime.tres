@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="NPCInfoResource" load_steps=6 format=3 uid="uid://dhlffux48vhyx"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/DialogStorageResource.cs" id="1_4tops"]
+[ext_resource type="Script" path="res://Scripts/Resources/NPCInfoResource.cs" id="2_ctn3q"]
+[ext_resource type="Texture2D" uid="uid://s85q3w5gwtge" path="res://Art/bount-white/Creatures.png" id="3_fhtpw"]
+
+[sub_resource type="Resource" id="Resource_jereg"]
+script = ExtResource("1_4tops")
+ExportedData = Array[PackedStringArray]([PackedStringArray("You swing at the slime... and miss! The slime ignores you and slowly oozes across the floor.", "You swing at the slime... and miss! The slime burbles angrily.", "You swing at the slime... and hit! The slime splits in two, then rejoins back into its original shape.")])
+useQuotes = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b1sap"]
+atlas = ExtResource("3_fhtpw")
+region = Rect2(40, 40, 10, 10)
+
+[resource]
+script = ExtResource("2_ctn3q")
+name = "slime"
+displayName = "Slime"
+killName = ""
+power = 29
+displayPower = true
+texture = SubResource("AtlasTexture_b1sap")
+color = Color(0.207843, 0.698039, 0.227451, 1)
+hurtColor = Color(1, 1, 1, 1)
+dialog = SubResource("Resource_jereg")

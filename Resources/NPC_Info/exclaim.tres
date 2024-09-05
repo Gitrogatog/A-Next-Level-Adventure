@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="NPCInfoResource" load_steps=6 format=3 uid="uid://jd6ibjegyrxd"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/DialogStorageResource.cs" id="1_ht0bf"]
+[ext_resource type="Script" path="res://Scripts/Resources/NPCInfoResource.cs" id="2_5lr6v"]
+[ext_resource type="Texture2D" uid="uid://s85q3w5gwtge" path="res://Art/bount-white/Creatures.png" id="3_kr58x"]
+
+[sub_resource type="Resource" id="Resource_cvwnm"]
+script = ExtResource("1_ht0bf")
+ExportedData = Array[PackedStringArray]([PackedStringArray("yaaaay!!! you made it out!!!", "im so proud... it was a team effort", "gonna miss you... but ill always remeber our journey together...", ":3"), PackedStringArray("welcome to the forbidden forest path!!! good luck!!!", "but dont worry... i put these signs here to guide you!!!", ":3"), PackedStringArray("oh no... wrong way... :\'("), PackedStringArray("yesss!!! this is the right way!!!! :3"), PackedStringArray("hehe... wrong path... >:3"), PackedStringArray("so many trees... @w@"), PackedStringArray("wrong way again... XP"), PackedStringArray("which way could it be :O", "hint: its not north!! XDDD"), PackedStringArray("wow your almost there!!! im so amazed!!! &w&"), PackedStringArray("mysterious.... 0m0"), PackedStringArray("i luv u :3"), PackedStringArray("nope a dead end hehe >:3"), PackedStringArray("loop de loop!!!", "when will it stop?? nobody noes!! XDD"), PackedStringArray("its never the last path........ or is it?????", ">:3"), PackedStringArray("could this be... the fabled... \"correct path\"??? :O")])
+useQuotes = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iqog6"]
+atlas = ExtResource("3_kr58x")
+region = Rect2(130, 70, 10, 10)
+
+[resource]
+script = ExtResource("2_5lr6v")
+name = "exclaim"
+displayName = "Sign"
+killName = ""
+power = 80
+displayPower = false
+texture = SubResource("AtlasTexture_iqog6")
+color = Color(0.443137, 0.305882, 0.203922, 1)
+hurtColor = Color(1, 1, 1, 1)
+dialog = SubResource("Resource_cvwnm")

@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="NPCInfoResource" load_steps=6 format=3 uid="uid://cad0hs0kjfame"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/DialogStorageResource.cs" id="1_gtjjn"]
+[ext_resource type="Script" path="res://Scripts/Resources/NPCInfoResource.cs" id="2_p08aa"]
+[ext_resource type="Texture2D" uid="uid://s85q3w5gwtge" path="res://Art/bount-white/Creatures.png" id="3_7a2h1"]
+
+[sub_resource type="Resource" id="Resource_lciau"]
+script = ExtResource("1_gtjjn")
+ExportedData = Array[PackedStringArray]([PackedStringArray("You found... some sort of yellow object? Possibly a weapon? It looks like nothing you\'ve ever seen before.", "Uuuuuhhh... you give it a light, experimental kick. Maybe a bit too hard, it\'s lighter than expected. ", "The object spins across the floor and hits the wall.", "PEW! A bright flash of light fires from the object and collides with the wall on the other side of the room. ", "When the dust settles, you can see the wall is missing a massive chunk of rock.", "...maybe better to leave it alone...")])
+useQuotes = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmmca"]
+atlas = ExtResource("3_7a2h1")
+region = Rect2(50, 80, 10, 10)
+
+[resource]
+script = ExtResource("2_p08aa")
+name = "blaster"
+displayName = "Weapon???"
+killName = ""
+power = 100
+displayPower = false
+texture = SubResource("AtlasTexture_hmmca")
+color = Color(0.968627, 0.768627, 0.223529, 1)
+hurtColor = Color(1, 1, 1, 1)
+dialog = SubResource("Resource_lciau")

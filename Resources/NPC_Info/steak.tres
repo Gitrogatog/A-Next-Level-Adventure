@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="NPCInfoResource" load_steps=6 format=3 uid="uid://c42mjcbw732o4"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/DialogStorageResource.cs" id="1_2egc2"]
+[ext_resource type="Script" path="res://Scripts/Resources/NPCInfoResource.cs" id="2_jwqay"]
+[ext_resource type="Texture2D" uid="uid://s85q3w5gwtge" path="res://Art/bount-white/Creatures.png" id="3_owtuv"]
+
+[sub_resource type="Resource" id="Resource_sb05i"]
+script = ExtResource("1_2egc2")
+ExportedData = Array[PackedStringArray]([PackedStringArray("You found a steak! It looks pretty tasty!", "Wait... it looks pretty dirty... who knows how long its been sitting on the floor?", "And it\'s still raw??? Are these monsters eating raw meat??? Pass...")])
+useQuotes = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_stjnu"]
+atlas = ExtResource("3_owtuv")
+region = Rect2(50, 90, 10, 10)
+
+[resource]
+script = ExtResource("2_jwqay")
+name = "steak"
+displayName = "Steak"
+killName = ""
+power = 100
+displayPower = false
+texture = SubResource("AtlasTexture_stjnu")
+color = Color(0.682353, 0.215686, 0.215686, 1)
+hurtColor = Color(1, 1, 1, 1)
+dialog = SubResource("Resource_sb05i")

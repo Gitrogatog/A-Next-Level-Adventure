@@ -1,0 +1,7 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://c8b6ucl0y01se"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/DialogStorageResource.cs" id="1_871lg"]
+
+[resource]
+script = ExtResource("1_871lg")
+ExportedData = Array[PackedStringArray]([PackedStringArray("hello!", "i am a goober"), PackedStringArray("goodbye", "i hate you", "jk ;)")])

@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="NPCInfoResource" load_steps=6 format=3 uid="uid://ddvg2xsd0bp2e"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/DialogStorageResource.cs" id="1_egaij"]
+[ext_resource type="Script" path="res://Scripts/Resources/NPCInfoResource.cs" id="2_0k2rb"]
+[ext_resource type="Texture2D" uid="uid://s85q3w5gwtge" path="res://Art/bount-white/Creatures.png" id="3_0xi5g"]
+
+[sub_resource type="Resource" id="Resource_x2yfk"]
+script = ExtResource("1_egaij")
+ExportedData = Array[PackedStringArray]([PackedStringArray("Nyeeeeh, get outta here, human! This here cave is MONSTER turf!", "Hmm... but perhaps I\'d be persuaded to move aside... if you got me one of those Magic Acorns!", "I\'ve always wanted a Magic Acorn, ever since I was a baby goblin... ", "but the other monsters never let me leave the cave...")])
+useQuotes = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mf26t"]
+atlas = ExtResource("3_0xi5g")
+region = Rect2(90, 70, 10, 10)
+
+[resource]
+script = ExtResource("2_0k2rb")
+name = "goblin"
+displayName = "Goblin"
+killName = ""
+power = 24
+displayPower = true
+texture = SubResource("AtlasTexture_mf26t")
+color = Color(0.207843, 0.698039, 0.227451, 1)
+hurtColor = Color(1, 1, 1, 1)
+dialog = SubResource("Resource_x2yfk")

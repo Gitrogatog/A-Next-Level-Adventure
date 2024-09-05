@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="NPCInfoResource" load_steps=6 format=3 uid="uid://copqnbw4w5vtr"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/DialogStorageResource.cs" id="1_1ge2o"]
+[ext_resource type="Script" path="res://Scripts/Resources/NPCInfoResource.cs" id="2_cq6cd"]
+[ext_resource type="Texture2D" uid="uid://s85q3w5gwtge" path="res://Art/bount-white/Creatures.png" id="3_cswtj"]
+
+[sub_resource type="Resource" id="Resource_pvk4g"]
+script = ExtResource("1_1ge2o")
+ExportedData = Array[PackedStringArray]([PackedStringArray("Doing its best to scare off the birds.", "Sadly its best isn\'t good enough.")])
+useQuotes = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aiv48"]
+atlas = ExtResource("3_cswtj")
+region = Rect2(40, 100, 10, 10)
+
+[resource]
+script = ExtResource("2_cq6cd")
+name = "scarecrow"
+displayName = "Scarecrow"
+killName = ""
+power = 70
+displayPower = false
+texture = SubResource("AtlasTexture_aiv48")
+color = Color(0.8, 0.556863, 0.298039, 1)
+hurtColor = Color(1, 1, 1, 1)
+dialog = SubResource("Resource_pvk4g")

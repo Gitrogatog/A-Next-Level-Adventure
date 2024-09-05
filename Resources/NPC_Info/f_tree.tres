@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="NPCInfoResource" load_steps=6 format=3 uid="uid://ces3owhnpysvw"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/DialogStorageResource.cs" id="1_eik5i"]
+[ext_resource type="Script" path="res://Scripts/Resources/NPCInfoResource.cs" id="2_dq1vw"]
+[ext_resource type="Texture2D" uid="uid://s85q3w5gwtge" path="res://Art/bount-white/Creatures.png" id="3_3kas4"]
+
+[sub_resource type="Resource" id="Resource_lyh4a"]
+script = ExtResource("1_eik5i")
+ExportedData = Array[PackedStringArray]([PackedStringArray("It\'s a tree.")])
+useQuotes = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xkao7"]
+atlas = ExtResource("3_3kas4")
+region = Rect2(90, 110, 10, 10)
+
+[resource]
+script = ExtResource("2_dq1vw")
+name = "f_tree"
+displayName = "Tree"
+killName = "Fake Tree"
+power = 0
+displayPower = false
+texture = SubResource("AtlasTexture_xkao7")
+color = Color(0.207843, 0.698039, 0.227451, 1)
+hurtColor = Color(1, 1, 1, 1)
+dialog = SubResource("Resource_lyh4a")

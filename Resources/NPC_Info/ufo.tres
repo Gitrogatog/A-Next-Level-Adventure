@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="NPCInfoResource" load_steps=6 format=3 uid="uid://cpa17o77su32x"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/DialogStorageResource.cs" id="1_n786x"]
+[ext_resource type="Script" path="res://Scripts/Resources/NPCInfoResource.cs" id="2_d0087"]
+[ext_resource type="Texture2D" uid="uid://s85q3w5gwtge" path="res://Art/bount-white/Creatures.png" id="3_m2wa7"]
+
+[sub_resource type="Resource" id="Resource_myfid"]
+script = ExtResource("1_n786x")
+ExportedData = Array[PackedStringArray]([PackedStringArray("Whatever it is, it\'s blowing out massive amounts of smoke.", "It also has a big dent on the front... probably not meant to be there.")])
+useQuotes = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yn4gu"]
+atlas = ExtResource("3_m2wa7")
+region = Rect2(70, 80, 10, 10)
+
+[resource]
+script = ExtResource("2_d0087")
+name = "ship"
+displayName = "UFO"
+killName = ""
+power = 100
+displayPower = false
+texture = SubResource("AtlasTexture_yn4gu")
+color = Color(0.207843, 0.698039, 0.227451, 1)
+hurtColor = Color(1, 1, 1, 1)
+dialog = SubResource("Resource_myfid")

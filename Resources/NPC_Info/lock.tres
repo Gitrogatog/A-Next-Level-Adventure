@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="NPCInfoResource" load_steps=6 format=3 uid="uid://blhmi24n0tc1s"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/DialogStorageResource.cs" id="1_53cbh"]
+[ext_resource type="Script" path="res://Scripts/Resources/NPCInfoResource.cs" id="2_nc0kp"]
+[ext_resource type="Texture2D" uid="uid://s85q3w5gwtge" path="res://Art/bount-white/Creatures.png" id="3_0gd75"]
+
+[sub_resource type="Resource" id="Resource_vm466"]
+script = ExtResource("1_53cbh")
+ExportedData = Array[PackedStringArray]([PackedStringArray("It seems to be a lock that prevents the music volume bar from working. There are 5 in total...", "You\'ll have to destroy all 5 to enable the music volume bar...")])
+useQuotes = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vaqsy"]
+atlas = ExtResource("3_0gd75")
+region = Rect2(90, 80, 10, 10)
+
+[resource]
+script = ExtResource("2_nc0kp")
+name = "lock"
+displayName = "Lock"
+killName = "Lock That Prevents The Music Volume Bar From Working"
+power = 2000
+displayPower = true
+texture = SubResource("AtlasTexture_vaqsy")
+color = Color(0.968627, 0.768627, 0.223529, 1)
+hurtColor = Color(1, 1, 1, 1)
+dialog = SubResource("Resource_vm466")

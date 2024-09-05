@@ -1,0 +1,93 @@
+[gd_resource type="Resource" load_steps=70 format=3 uid="uid://bf40xyevsrqh8"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/NPCDictionaryResource.cs" id="1_mgm8l"]
+[ext_resource type="Resource" uid="uid://bygw38rid6ti3" path="res://Resources/NPC_Info/basic_human_info.tres" id="1_uhi8o"]
+[ext_resource type="Resource" uid="uid://v0eaot1hkfoc" path="res://Resources/NPC_Info/snail_info.tres" id="2_ga6xh"]
+[ext_resource type="Resource" uid="uid://ny6mcwc67cu" path="res://Resources/NPC_Info/bird_info.tres" id="3_vbu3h"]
+[ext_resource type="Resource" uid="uid://7fgyehy6ss0a" path="res://Resources/NPC_Info/pumpkin_info.tres" id="4_i85b1"]
+[ext_resource type="Resource" uid="uid://copqnbw4w5vtr" path="res://Resources/NPC_Info/scarecrow_info.tres" id="5_74nbh"]
+[ext_resource type="Resource" uid="uid://8di0pk4n0any" path="res://Resources/NPC_Info/sign_info.tres" id="6_wtiph"]
+[ext_resource type="Resource" uid="uid://cy7evmjr0wnmo" path="res://Resources/NPC_Info/walrus_info.tres" id="7_tsosg"]
+[ext_resource type="Resource" uid="uid://ckpkssws2plw" path="res://Resources/NPC_Info/knight_info.tres" id="8_do4fe"]
+[ext_resource type="Resource" uid="uid://bqsajrt0e23ls" path="res://Resources/NPC_Info/statue.tres" id="9_21ecf"]
+[ext_resource type="Resource" uid="uid://j3kln6ugv3o3" path="res://Resources/NPC_Info/pot_info.tres" id="10_b5wvg"]
+[ext_resource type="Resource" uid="uid://ct5pfklx82nwa" path="res://Resources/NPC_Info/wolf_info.tres" id="11_8q3wl"]
+[ext_resource type="Resource" uid="uid://e2o3kvowdujb" path="res://Resources/NPC_Info/dragon_info.tres" id="12_o7sc4"]
+[ext_resource type="Resource" uid="uid://ddvg2xsd0bp2e" path="res://Resources/NPC_Info/goblin.tres" id="13_nmrdt"]
+[ext_resource type="Resource" uid="uid://bx20ohbestdc8" path="res://Resources/NPC_Info/bat.tres" id="14_eyhtk"]
+[ext_resource type="Resource" uid="uid://dhlffux48vhyx" path="res://Resources/NPC_Info/slime.tres" id="15_xljaf"]
+[ext_resource type="Resource" uid="uid://3a1xvafwhoay" path="res://Resources/NPC_Info/evil_eye.tres" id="16_bwwj4"]
+[ext_resource type="Resource" uid="uid://ccb3vgjpecrbn" path="res://Resources/NPC_Info/gleegox.tres" id="17_f6fp6"]
+[ext_resource type="Resource" uid="uid://d15mow5xwtki" path="res://Resources/NPC_Info/chest.tres" id="18_iied6"]
+[ext_resource type="Resource" uid="uid://dfteuvl0fl7ng" path="res://Resources/NPC_Info/mimic_chest.tres" id="19_crm31"]
+[ext_resource type="Resource" uid="uid://rc0rl4bwry0t" path="res://Resources/NPC_Info/mimic_sign.tres" id="20_ywmqh"]
+[ext_resource type="Resource" uid="uid://bd7ivggn4f5qy" path="res://Resources/NPC_Info/wizard.tres" id="21_vuabx"]
+[ext_resource type="Resource" uid="uid://crx8qw21e2sd0" path="res://Resources/NPC_Info/key.tres" id="22_2in2q"]
+[ext_resource type="Resource" uid="uid://dp34p8ndr15ub" path="res://Resources/NPC_Info/sword.tres" id="23_5blc6"]
+[ext_resource type="Resource" uid="uid://jd6ibjegyrxd" path="res://Resources/NPC_Info/exclaim.tres" id="24_adfw7"]
+[ext_resource type="Resource" uid="uid://56ln8swbmssy" path="res://Resources/NPC_Info/skeleton.tres" id="25_qae2y"]
+[ext_resource type="Resource" uid="uid://d2vk36quqkenb" path="res://Resources/NPC_Info/ghost.tres" id="26_6mtil"]
+[ext_resource type="Resource" uid="uid://dp3cwp2fy6phu" path="res://Resources/NPC_Info/grave.tres" id="27_n4kv8"]
+[ext_resource type="Resource" uid="uid://cs3b6vb3a553k" path="res://Resources/NPC_Info/smile.tres" id="28_6wk46"]
+[ext_resource type="Resource" uid="uid://cwj0wyqdi2bof" path="res://Resources/NPC_Info/door.tres" id="29_37h2d"]
+[ext_resource type="Resource" uid="uid://cq32abgg6g0b5" path="res://Resources/NPC_Info/mimic_tree.tres" id="30_0fo7o"]
+[ext_resource type="Resource" uid="uid://cc1emw7pqu337" path="res://Resources/NPC_Info/scroll.tres" id="31_nuvjq"]
+[ext_resource type="Resource" uid="uid://bltn55n6wc0ff" path="res://Resources/NPC_Info/helmet.tres" id="32_ex5at"]
+[ext_resource type="Resource" uid="uid://c42mjcbw732o4" path="res://Resources/NPC_Info/steak.tres" id="33_k4678"]
+[ext_resource type="Resource" uid="uid://c8wxtyqr6g6lw" path="res://Resources/NPC_Info/axe.tres" id="34_vtoot"]
+[ext_resource type="Resource" uid="uid://cad0hs0kjfame" path="res://Resources/NPC_Info/blaster.tres" id="35_hrlfs"]
+[ext_resource type="Resource" uid="uid://qmhngcanakwa" path="res://Resources/NPC_Info/coin1.tres" id="36_g8c5a"]
+[ext_resource type="Resource" uid="uid://r56wlhhm4o88" path="res://Resources/NPC_Info/coin2.tres" id="37_p1a10"]
+[ext_resource type="Resource" uid="uid://kcl1xsq7jdcq" path="res://Resources/NPC_Info/coin3.tres" id="38_hxy1l"]
+[ext_resource type="Resource" uid="uid://c8pyg03ec53re" path="res://Resources/NPC_Info/coin4.tres" id="39_tn6cy"]
+[ext_resource type="Resource" uid="uid://d1447lk7gobh7" path="res://Resources/NPC_Info/coin5.tres" id="40_l2wcn"]
+[ext_resource type="Resource" uid="uid://doyu3i7yg1pa7" path="res://Resources/NPC_Info/gem1.tres" id="41_5yb3s"]
+[ext_resource type="Resource" uid="uid://dgmxn35varjtw" path="res://Resources/NPC_Info/gem2.tres" id="42_fk070"]
+[ext_resource type="Resource" uid="uid://cuttjgkkxyyky" path="res://Resources/NPC_Info/gem3.tres" id="43_rtstx"]
+[ext_resource type="Resource" uid="uid://b70v0yjffu15y" path="res://Resources/NPC_Info/goldbar.tres" id="44_fn2u8"]
+[ext_resource type="Resource" uid="uid://dttypmvn5te1u" path="res://Resources/NPC_Info/gem4.tres" id="44_rdeht"]
+[ext_resource type="Resource" uid="uid://ibqp56cgjk1y" path="res://Resources/NPC_Info/gem5.tres" id="45_jh5a0"]
+[ext_resource type="Resource" uid="uid://diqcatbhab0we" path="res://Resources/NPC_Info/rabbit.tres" id="45_xwypj"]
+[ext_resource type="Resource" uid="uid://crjhujkxd0p1o" path="res://Resources/NPC_Info/fox.tres" id="46_ou1ym"]
+[ext_resource type="Resource" uid="uid://c6aalkb6w5gie" path="res://Resources/NPC_Info/cash.tres" id="46_qmckk"]
+[ext_resource type="Resource" uid="uid://bqacmvcbh5q36" path="res://Resources/NPC_Info/dust1.tres" id="47_h1bbf"]
+[ext_resource type="Resource" uid="uid://xdsnfbr0wnr0" path="res://Resources/NPC_Info/snake.tres" id="47_xjmjs"]
+[ext_resource type="Resource" uid="uid://ces3owhnpysvw" path="res://Resources/NPC_Info/f_tree.tres" id="48_0r25v"]
+[ext_resource type="Resource" uid="uid://cql2fncbwe3nk" path="res://Resources/NPC_Info/dust2.tres" id="48_y7ndb"]
+[ext_resource type="Resource" uid="uid://vc4d33qleqcb" path="res://Resources/NPC_Info/book.tres" id="49_n34mr"]
+[ext_resource type="Resource" uid="uid://dj624iga4ijhc" path="res://Resources/NPC_Info/acorn.tres" id="55_orx2f"]
+[ext_resource type="Resource" uid="uid://dffvcgxux86y6" path="res://Resources/NPC_Info/alien2.tres" id="56_j7qe8"]
+[ext_resource type="Resource" uid="uid://ddd16xksq7inj" path="res://Resources/NPC_Info/water.tres" id="57_8fyaq"]
+[ext_resource type="Resource" uid="uid://caef5e1woi6th" path="res://Resources/NPC_Info/fence.tres" id="58_mgvd3"]
+[ext_resource type="Resource" uid="uid://cpa17o77su32x" path="res://Resources/NPC_Info/ufo.tres" id="59_2hhpe"]
+[ext_resource type="Resource" uid="uid://blhmi24n0tc1s" path="res://Resources/NPC_Info/lock.tres" id="60_w20l0"]
+[ext_resource type="Resource" uid="uid://c3quwi1bdib7k" path="res://Resources/NPC_Info/triangle.tres" id="61_5l007"]
+[ext_resource type="Resource" uid="uid://b1yfmlqaw8wew" path="res://Resources/NPC_Info/circle.tres" id="62_stu8p"]
+[ext_resource type="Script" path="res://Scripts/Resources/DialogStorageResource.cs" id="63_8fxqb"]
+[ext_resource type="Script" path="res://Scripts/Resources/NPCInfoResource.cs" id="63_s43ql"]
+[ext_resource type="Texture2D" uid="uid://s85q3w5gwtge" path="res://Art/bount-white/Creatures.png" id="64_47l0u"]
+
+[sub_resource type="Resource" id="Resource_lymoj"]
+script = ExtResource("63_8fxqb")
+ExportedData = Array[PackedStringArray]([PackedStringArray("...")])
+useQuotes = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ge70"]
+atlas = ExtResource("64_47l0u")
+region = Rect2(110, 40, 10, 10)
+
+[sub_resource type="Resource" id="Resource_iqhsy"]
+script = ExtResource("63_s43ql")
+name = "fake_smile"
+displayName = "Fake Smile"
+killName = ""
+power = 0
+displayPower = false
+texture = SubResource("AtlasTexture_7ge70")
+color = Color(1, 1, 1, 1)
+hurtColor = Color(1, 1, 1, 1)
+dialog = SubResource("Resource_lymoj")
+
+[resource]
+script = ExtResource("1_mgm8l")
+npcInfo = Array[Resource]([ExtResource("1_uhi8o"), ExtResource("2_ga6xh"), ExtResource("3_vbu3h"), ExtResource("4_i85b1"), ExtResource("5_74nbh"), ExtResource("6_wtiph"), ExtResource("7_tsosg"), ExtResource("8_do4fe"), ExtResource("9_21ecf"), ExtResource("10_b5wvg"), ExtResource("11_8q3wl"), ExtResource("12_o7sc4"), ExtResource("13_nmrdt"), ExtResource("14_eyhtk"), ExtResource("15_xljaf"), ExtResource("16_bwwj4"), ExtResource("17_f6fp6"), ExtResource("18_iied6"), ExtResource("19_crm31"), ExtResource("20_ywmqh"), ExtResource("21_vuabx"), ExtResource("22_2in2q"), ExtResource("23_5blc6"), ExtResource("24_adfw7"), ExtResource("25_qae2y"), ExtResource("26_6mtil"), ExtResource("27_n4kv8"), ExtResource("28_6wk46"), ExtResource("29_37h2d"), ExtResource("30_0fo7o"), ExtResource("31_nuvjq"), ExtResource("32_ex5at"), ExtResource("33_k4678"), ExtResource("34_vtoot"), ExtResource("35_hrlfs"), ExtResource("36_g8c5a"), ExtResource("37_p1a10"), ExtResource("38_hxy1l"), ExtResource("39_tn6cy"), ExtResource("40_l2wcn"), ExtResource("41_5yb3s"), ExtResource("42_fk070"), ExtResource("43_rtstx"), ExtResource("44_rdeht"), ExtResource("45_jh5a0"), ExtResource("46_qmckk"), ExtResource("47_h1bbf"), ExtResource("48_y7ndb"), ExtResource("44_fn2u8"), ExtResource("45_xwypj"), ExtResource("46_ou1ym"), ExtResource("47_xjmjs"), ExtResource("48_0r25v"), ExtResource("49_n34mr"), ExtResource("55_orx2f"), ExtResource("56_j7qe8"), ExtResource("57_8fyaq"), ExtResource("58_mgvd3"), ExtResource("59_2hhpe"), ExtResource("60_w20l0"), ExtResource("61_5l007"), ExtResource("62_stu8p"), SubResource("Resource_iqhsy")])

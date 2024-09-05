@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="NPCInfoResource" load_steps=6 format=3 uid="uid://8di0pk4n0any"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/DialogStorageResource.cs" id="1_usywe"]
+[ext_resource type="Script" path="res://Scripts/Resources/NPCInfoResource.cs" id="2_pbup1"]
+[ext_resource type="Texture2D" uid="uid://s85q3w5gwtge" path="res://Art/bount-white/Creatures.png" id="3_jq2sx"]
+
+[sub_resource type="Resource" id="Resource_carni"]
+script = ExtResource("1_usywe")
+ExportedData = Array[PackedStringArray]([PackedStringArray("Your house"), PackedStringArray("Welcome to Townsville!", "The proudest town in Numland!"), PackedStringArray("Crowrook Castle"), PackedStringArray("Memorial to the ancient hero, who saved our kingdom long ago."), PackedStringArray("East: To Forest"), PackedStringArray("Welcome to Magic Mart! Your one-stop shop for all your adventuring needs!"), PackedStringArray("Northeast: To Acorn Lake.", "South: To Riverside Cottage Resort", "West: To Townsville"), PackedStringArray("Welcome to Acorn Lake!"), PackedStringArray("North: To Crowrook Castle"), PackedStringArray("West: To Rogue Caverns"), PackedStringArray("Welcome to Riverside Cottage Resort! The ideal vacation destination for nature lovers.", "Experience the beauty of the forest and its calming lakes and rivers, inside our cozy cabins.", "Named the #1 forest resort destination by Medieval Monthly! "), PackedStringArray("Hello esteemed guest, the Riverside Cottage Resort family hopes you enjoy your stay.", "If you have any concerns, please don\'t hesitate to let one of our service team members know.", "Bothered by the local wildlife? Don\'t worry, this resort is protected by our sworn guardian:", "The great dragon-slaying hero!"), PackedStringArray("In an abundance of caution, our nightly forest hikes have been canceled indefinitely."), PackedStringArray("Hint: If you ever get lost, talk to people! You may have missed something."), PackedStringArray("Only the one who destroys my statue in the town square is worthy to wield my blade...", "(I always hated that stupid statue)"), PackedStringArray("The phrase \"Rogue Caverns\" has been crossed out. Below is some barely-legible scrawl:", "Monster Town! humans keep out!!!", "Definitely NOT home to the Key of Yendor!!!!"), PackedStringArray("Hint: Walk into entities to talk to them. Some entities have more than one thing to say...", "Yes! Just like this sign!", "Additional dialog is indicated by the \"...\" in the bottom right corner.", "Hey, you\'re getting good at this \"talking multiple times\" thing!", "...", "...maybe a little TOO good."), PackedStringArray("Hint: Hold down the directional key to continuously move in that direction."), PackedStringArray("Hint: Walk into enemies to challenge them to a fight.", "If their level is lower than yours, you\'ll win and gain a level! Don\'t worry, there\'s no penalty for losing.", "Your level is shown in the botton left corner. The enemy\'s level is shown on the right, next to their name.", "Try fighting anything you come across! Get as powerful as you can!", "Become the strongest in the land!!! I believe in you!!!"), PackedStringArray("By staying at Riverside Cottage Resort, GUEST agrees to release RESORT from liability of the following:", "Loss/damage to personal property, bodily injury, death from wild animals, death from tame animals...", "death by eating poisonous plants/mushrooms, death by eating venomous plants/mushrooms...", "death by not eating enough plants/mushrooms, death by carnivorous plants/mushrooms...", "...", "...the list goes on... you decide to stop reading."), PackedStringArray("Here lies the great hero... Probably.", "His legacy as the man with the biggest number will live on forever...", "Uh, until someone gets an even bigger number that is."), PackedStringArray("Hint: Take things slow, like the snail....")])
+useQuotes = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o87ym"]
+atlas = ExtResource("3_jq2sx")
+region = Rect2(130, 70, 10, 10)
+
+[resource]
+script = ExtResource("2_pbup1")
+name = "sign"
+displayName = "Sign"
+killName = ""
+power = 80
+displayPower = false
+texture = SubResource("AtlasTexture_o87ym")
+color = Color(0.635294, 0.380392, 0.203922, 1)
+hurtColor = Color(1, 1, 1, 1)
+dialog = SubResource("Resource_carni")

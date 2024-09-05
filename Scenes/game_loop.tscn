@@ -1,0 +1,616 @@
+[gd_scene load_steps=49 format=3 uid="uid://cfxecnxgj4j28"]
+
+[ext_resource type="Script" path="res://Scripts/GameLoop.cs" id="1_wu83f"]
+[ext_resource type="Resource" uid="uid://bf40xyevsrqh8" path="res://Resources/npc_dictionary.tres" id="2_kfhi3"]
+[ext_resource type="Resource" uid="uid://b6mu61wsjfrxo" path="res://Resources/entity_textures.tres" id="2_wd62o"]
+[ext_resource type="Script" path="res://Scripts/Drawing/DrawCallback.cs" id="3_hrnwb"]
+[ext_resource type="PackedScene" uid="uid://2rimjre0mgyw" path="res://Scenes/bountiful_tilemap.tscn" id="4_md4mn"]
+[ext_resource type="FontFile" uid="uid://cpc7v0egibs04" path="res://Art/monogram-extended.ttf" id="6_onl01"]
+[ext_resource type="Texture2D" uid="uid://jrn042g2ssbo" path="res://Art/frames 1-bit.png" id="7_18d37"]
+[ext_resource type="Texture2D" uid="uid://vqvftrtygvg3" path="res://Art/bountiful/Weapons.png" id="8_338wm"]
+[ext_resource type="Texture2D" uid="uid://b0js5vfbfhuxr" path="res://Art/dot_anim.png" id="8_jisuc"]
+[ext_resource type="Texture2D" uid="uid://eab57p35u8r6" path="res://Art/slider-knob.png" id="9_671vu"]
+[ext_resource type="AudioStream" uid="uid://crni86xct4d66" path="res://Audio/Explosions/Vocals/v_explo06.wav" id="10_nuehv"]
+[ext_resource type="AudioStream" uid="uid://cnmfjaoehx3wb" path="res://Audio/Explosions/Vocals/vocal_explosion01.wav" id="10_vvoie"]
+[ext_resource type="AudioStream" uid="uid://dyl384gl3yur4" path="res://Audio/Explosions/Vocals/vocal_explosion02.wav" id="11_c05hx"]
+[ext_resource type="AudioStream" uid="uid://catekxgclhdyn" path="res://Audio/Explosions/Vocals/v_explo07.wav" id="11_eep14"]
+[ext_resource type="PackedScene" uid="uid://b5t32d5wsnjo" path="res://Scenes/explosion_anim.tscn" id="11_qv513"]
+[ext_resource type="AudioStream" uid="uid://ddxmb2a386bng" path="res://Audio/Explosions/Vocals/vocal_explosion03.wav" id="12_7a7fn"]
+[ext_resource type="AudioStream" uid="uid://3h8ccil5mvbg" path="res://Audio/Explosions/Vocals/v_explo08.wav" id="12_spfoc"]
+[ext_resource type="AudioStream" uid="uid://cdx5l2cn6t7v8" path="res://Audio/Explosions/Vocals/vocal_explosion04.wav" id="13_c7x3t"]
+[ext_resource type="AudioStream" uid="uid://k0xcw3bae1wj" path="res://Audio/Explosions/Vocals/v_explo09.wav" id="13_uf3l8"]
+[ext_resource type="AudioStream" uid="uid://dsupe88d66drc" path="res://Audio/Explosions/Vocals/v_explo10.wav" id="14_gplx5"]
+[ext_resource type="AudioStream" uid="uid://ddp117vjuamw6" path="res://Audio/Explosions/Vocals/vocal_explosion05.wav" id="14_kgvsj"]
+[ext_resource type="AudioStream" uid="uid://go76sa8vcql2" path="res://Audio/Explosions/Vocals/v_explo11.wav" id="15_qacfb"]
+[ext_resource type="Script" path="res://Scripts/Nodes/VolumeSlider.cs" id="22_g8gyx"]
+[ext_resource type="Script" path="res://Scripts/Nodes/FastModeButton.cs" id="22_yuku3"]
+[ext_resource type="AudioStream" uid="uid://c8gj62uapjuqc" path="res://Audio/Music/bah_looped_proper.wav" id="24_0rv3n"]
+[ext_resource type="AudioStream" uid="uid://di4anoie4uv20" path="res://Audio/New_Recording_5 (1).wav" id="25_52ad0"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_i6br5"]
+viewport_path = NodePath("GameViewport")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rxsx1"]
+atlas = ExtResource("7_18d37")
+region = Rect2(80, 80, 32, 32)
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4vbmk"]
+atlas = ExtResource("8_jisuc")
+region = Rect2(0, 60, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v5mho"]
+atlas = ExtResource("8_jisuc")
+region = Rect2(0, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_psdas"]
+atlas = ExtResource("8_jisuc")
+region = Rect2(20, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eaxju"]
+atlas = ExtResource("8_jisuc")
+region = Rect2(40, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhdyg"]
+atlas = ExtResource("8_jisuc")
+region = Rect2(60, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mimpy"]
+atlas = ExtResource("8_jisuc")
+region = Rect2(0, 20, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ecwp"]
+atlas = ExtResource("8_jisuc")
+region = Rect2(20, 20, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ygdgq"]
+atlas = ExtResource("8_jisuc")
+region = Rect2(40, 20, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3i24p"]
+atlas = ExtResource("8_jisuc")
+region = Rect2(60, 20, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_icnj0"]
+atlas = ExtResource("8_jisuc")
+region = Rect2(0, 40, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8m4w1"]
+atlas = ExtResource("8_jisuc")
+region = Rect2(20, 40, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y0qrp"]
+atlas = ExtResource("8_jisuc")
+region = Rect2(40, 40, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7i8m"]
+atlas = ExtResource("8_jisuc")
+region = Rect2(60, 40, 20, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qhwb7"]
+animations = [{
+"frames": [{
+"duration": 8.0,
+"texture": SubResource("AtlasTexture_4vbmk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v5mho")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_psdas")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eaxju")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhdyg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eaxju")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_psdas")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v5mho")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4vbmk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mimpy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ecwp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ygdgq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3i24p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ygdgq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ecwp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mimpy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4vbmk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_icnj0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8m4w1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y0qrp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7i8m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y0qrp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8m4w1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_icnj0")
+}],
+"loop": true,
+"name": &"play",
+"speed": 30.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fw5pq"]
+atlas = ExtResource("7_18d37")
+region = Rect2(40, 336, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2cfm"]
+atlas = ExtResource("8_338wm")
+region = Rect2(0, 0, 10, 10)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_bssyy"]
+color = Color(0.00392157, 0.227451, 0.388235, 1)
+grow_begin = -1.0
+grow_end = -1.0
+thickness = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fg4ae"]
+bg_color = Color(0.380392, 0.647059, 0.760784, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n7dpt"]
+bg_color = Color(0.380392, 0.647059, 0.760784, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dhtmn"]
+bg_color = Color(0.380392, 0.647059, 0.760784, 1)
+
+[node name="GameLoop" type="Node2D"]
+script = ExtResource("1_wu83f")
+npcResource = ExtResource("2_kfhi3")
+entityTextures = ExtResource("2_wd62o")
+explosionScene = ExtResource("11_qv513")
+explosionSFX = Array[AudioStream]([ExtResource("10_vvoie"), ExtResource("11_c05hx"), ExtResource("12_7a7fn"), ExtResource("13_c7x3t"), ExtResource("14_kgvsj"), ExtResource("10_nuehv"), ExtResource("11_eep14"), ExtResource("12_spfoc"), ExtResource("13_uf3l8"), ExtResource("14_gplx5"), ExtResource("15_qacfb")])
+roomSize = Vector2i(16, 12)
+hurtColor1 = Color(1, 1, 1, 1)
+hurtColor2 = Color(0.682353, 0.215686, 0.215686, 1)
+exploreOuterLevel = 400
+fastModeLevel = 1000
+
+[node name="GameViewport" type="SubViewport" parent="."]
+transparent_bg = true
+canvas_item_default_texture_filter = 0
+size = Vector2i(160, 120)
+
+[node name="Camera2D" type="Camera2D" parent="GameViewport"]
+anchor_mode = 0
+
+[node name="TileMap" parent="GameViewport" instance=ExtResource("4_md4mn")]
+
+[node name="Drawing" type="Node2D" parent="GameViewport"]
+script = ExtResource("3_hrnwb")
+
+[node name="Display" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="Border" type="ColorRect" parent="Display"]
+layout_mode = 0
+offset_right = 170.0
+offset_bottom = 130.0
+scale = Vector2(3, 3)
+color = Color(0.572549, 0.6, 0.572549, 1)
+
+[node name="Background" type="ColorRect" parent="Display"]
+layout_mode = 1
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 175.0
+offset_bottom = 135.0
+scale = Vector2(3, 3)
+color = Color(0.12549, 0.0705882, 0.0313726, 1)
+
+[node name="GameTexture" type="TextureRect" parent="Display"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 175.0
+offset_bottom = 135.0
+grow_horizontal = 2
+scale = Vector2(3, 3)
+texture = SubResource("ViewportTexture_i6br5")
+
+[node name="NPCUI" type="Control" parent="Display"]
+anchors_preset = 0
+offset_left = 540.0
+offset_top = 155.0
+offset_right = 540.0
+offset_bottom = 155.0
+
+[node name="Name" type="RichTextLabel" parent="Display/NPCUI"]
+modulate = Color(0.823529, 0.878431, 1, 1)
+texture_filter = 1
+layout_mode = 0
+offset_right = 61.0
+offset_bottom = 20.0
+scale = Vector2(3, 3)
+theme_override_fonts/normal_font = ExtResource("6_onl01")
+text = "Scarecrow"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="Level" type="RichTextLabel" parent="Display/NPCUI"]
+modulate = Color(0, 1, 1, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = 181.0
+offset_top = 2.0
+offset_right = 241.0
+offset_bottom = 22.0
+scale = Vector2(3, 3)
+theme_override_fonts/normal_font = ExtResource("6_onl01")
+text = "LV 20
+"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Display/NPCUI"]
+layout_mode = 0
+offset_left = -20.0
+offset_top = 40.0
+offset_right = 105.0
+offset_bottom = 105.0
+scale = Vector2(4, 4)
+texture = SubResource("AtlasTexture_rxsx1")
+region_rect = Rect2(0, 0, 32, 32)
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="DialogBox" type="RichTextLabel" parent="Display/NPCUI"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 10.0
+offset_top = 67.0
+offset_right = 157.0
+offset_bottom = 133.0
+scale = Vector2(3, 3)
+theme_override_fonts/normal_font = ExtResource("6_onl01")
+scroll_active = false
+
+[node name="ExtraDialog" type="Control" parent="Display/NPCUI"]
+anchors_preset = 0
+offset_left = 395.0
+offset_top = 222.0
+offset_right = 435.0
+offset_bottom = 262.0
+scale = Vector2(2, 2)
+
+[node name="Background" type="ColorRect" parent="Display/NPCUI/ExtraDialog"]
+layout_mode = 0
+offset_top = 20.0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.0666667, 0.0666667, 0.0666667, 1)
+
+[node name="Anim" type="AnimatedSprite2D" parent="Display/NPCUI/ExtraDialog"]
+position = Vector2(20, 20)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_qhwb7")
+animation = &"play"
+autoplay = "play"
+
+[node name="PlayerUI" type="Control" parent="Display"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Level" type="RichTextLabel" parent="Display/PlayerUI"]
+modulate = Color(0, 1, 1, 1)
+texture_filter = 1
+layout_mode = 0
+offset_top = 400.0
+offset_right = 50.0
+offset_bottom = 420.0
+scale = Vector2(3, 3)
+theme_override_fonts/normal_font = ExtResource("6_onl01")
+text = "LV 01"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="Gold" type="RichTextLabel" parent="Display/PlayerUI"]
+modulate = Color(0.968627, 0.768627, 0.223529, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = 140.0
+offset_top = 400.0
+offset_right = 190.0
+offset_bottom = 420.0
+scale = Vector2(3, 3)
+theme_override_fonts/normal_font = ExtResource("6_onl01")
+text = "Gold 00"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="HP" type="RichTextLabel" parent="Display/PlayerUI"]
+modulate = Color(0.682353, 0.215686, 0.215686, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = 310.0
+offset_top = 400.0
+offset_right = 360.0
+offset_bottom = 420.0
+scale = Vector2(3, 3)
+theme_override_fonts/normal_font = ExtResource("6_onl01")
+text = "Life"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="ColorRect" type="ColorRect" parent="Display/PlayerUI"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 405.0
+offset_right = 510.0
+offset_bottom = 435.0
+color = Color(0.682353, 0.215686, 0.215686, 1)
+
+[node name="Inventory" type="Control" parent="Display"]
+texture_filter = 1
+anchors_preset = 0
+offset_left = 790.0
+offset_right = 790.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Display/Inventory"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = -2.0
+offset_right = 70.0
+offset_bottom = 38.0
+scale = Vector2(4, 4)
+texture = SubResource("AtlasTexture_fw5pq")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="Sword" type="TextureRect" parent="Display/Inventory"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 20.0
+offset_right = 90.0
+offset_bottom = 70.0
+texture = SubResource("AtlasTexture_d2cfm")
+
+[node name="FastMode" type="Control" parent="Display/Inventory"]
+anchors_preset = 0
+offset_left = 68.0
+offset_top = 87.0
+offset_right = 108.0
+offset_bottom = 127.0
+
+[node name="Text" type="RichTextLabel" parent="Display/Inventory/FastMode"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -31.0
+offset_top = 16.0
+offset_right = 49.0
+offset_bottom = 56.0
+scale = Vector2(2, 2)
+theme_override_fonts/normal_font = ExtResource("6_onl01")
+text = "Fast Mode:"
+scroll_active = false
+
+[node name="ColorRect" type="ColorRect" parent="Display/Inventory/FastMode"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 12.0
+offset_right = 136.0
+offset_bottom = 52.0
+color = Color(0.572549, 0.6, 0.572549, 1)
+
+[node name="CheckButton" type="CheckBox" parent="Display/Inventory/FastMode"]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 8.0
+offset_right = 116.0
+offset_bottom = 32.0
+scale = Vector2(2, 2)
+script = ExtResource("22_yuku3")
+
+[node name="Locks" type="Control" parent="Display/Inventory"]
+anchors_preset = 0
+offset_left = 102.0
+offset_top = 23.0
+offset_right = 142.0
+offset_bottom = 63.0
+
+[node name="Label" type="RichTextLabel" parent="Display/Inventory/Locks"]
+texture_filter = 1
+layout_mode = 0
+offset_top = -2.0
+offset_right = 54.0
+offset_bottom = 38.0
+scale = Vector2(2, 2)
+theme_override_fonts/normal_font = ExtResource("6_onl01")
+text = "Locks Left:"
+scroll_active = false
+
+[node name="NumBox" type="RichTextLabel" parent="Display/Inventory/Locks"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 72.0
+offset_top = 1.0
+offset_right = 81.0
+offset_bottom = 16.0
+scale = Vector2(4, 4)
+theme_override_fonts/normal_font = ExtResource("6_onl01")
+text = "5"
+scroll_active = false
+
+[node name="InfoUI" type="Control" parent="Display"]
+anchors_preset = 0
+offset_left = 530.0
+offset_top = 1.0
+offset_right = 570.0
+offset_bottom = 41.0
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="Display/InfoUI"]
+layout_mode = 0
+offset_right = 70.0
+offset_bottom = 40.0
+scale = Vector2(4, 4)
+texture = SubResource("AtlasTexture_fw5pq")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="Sliders" type="Control" parent="Display/InfoUI"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MusicText" type="RichTextLabel" parent="Display/InfoUI/Sliders"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 11.0
+offset_right = 101.0
+offset_bottom = 27.0
+scale = Vector2(3, 3)
+theme_override_fonts/normal_font = ExtResource("6_onl01")
+text = "Music Volume"
+scroll_active = false
+
+[node name="MusicSlider" type="HSlider" parent="Display/InfoUI/Sliders"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 50.0
+offset_right = 140.0
+offset_bottom = 70.0
+scale = Vector2(2, 2)
+theme_override_icons/grabber = ExtResource("9_671vu")
+theme_override_icons/grabber_highlight = ExtResource("9_671vu")
+theme_override_styles/slider = SubResource("StyleBoxLine_bssyy")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_fg4ae")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_n7dpt")
+max_value = 1.0
+step = 0.01
+value = 1.0
+scrollable = false
+script = ExtResource("22_g8gyx")
+AudioBusName = "Music"
+
+[node name="MusicText2" type="RichTextLabel" parent="Display/InfoUI/Sliders"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 79.0
+offset_right = 89.0
+offset_bottom = 93.0
+scale = Vector2(3, 3)
+theme_override_fonts/normal_font = ExtResource("6_onl01")
+text = "SFX Volume"
+scroll_active = false
+
+[node name="SFXSlider" type="HSlider" parent="Display/InfoUI/Sliders"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 110.0
+offset_right = 140.0
+offset_bottom = 130.0
+scale = Vector2(2, 2)
+theme_override_icons/grabber = ExtResource("9_671vu")
+theme_override_icons/grabber_highlight = ExtResource("9_671vu")
+theme_override_styles/slider = SubResource("StyleBoxLine_bssyy")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_fg4ae")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_dhtmn")
+max_value = 1.0
+step = 0.01
+value = 1.0
+scrollable = false
+script = ExtResource("22_g8gyx")
+AudioBusName = "SFX"
+Enabled = true
+
+[node name="Alert" type="Control" parent="Display/InfoUI"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="ColorRect" parent="Display/InfoUI/Alert"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 16.0
+offset_right = 262.0
+offset_bottom = 145.0
+color = Color(0.0666667, 0.0666667, 0.0666667, 1)
+
+[node name="TextBox" type="RichTextLabel" parent="Display/InfoUI/Alert"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 100.0
+offset_bottom = 60.0
+scale = Vector2(3, 3)
+theme_override_fonts/normal_font = ExtResource("6_onl01")
+text = "You Win! 
+Try walking into walls!!!"
+scroll_active = false
+
+[node name="ExplosionParent" type="Control" parent="Display"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AudioParent" type="Node" parent="."]
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="AudioParent"]
+stream = ExtResource("24_0rv3n")
+bus = &"Music"
+
+[node name="VoicePlayer" type="AudioStreamPlayer" parent="AudioParent"]
+stream = ExtResource("25_52ad0")
+volume_db = -5.0
+bus = &"Voice"
+
+[connection signal="mouse_exited" from="Display/InfoUI/Sliders/MusicSlider" to="Display/InfoUI/Sliders/MusicSlider" method="release_focus"]
+[connection signal="mouse_exited" from="Display/InfoUI/Sliders/SFXSlider" to="Display/InfoUI/Sliders/SFXSlider" method="release_focus"]

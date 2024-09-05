@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="NPCInfoResource" load_steps=6 format=3 uid="uid://cy7evmjr0wnmo"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/DialogStorageResource.cs" id="1_7jwiu"]
+[ext_resource type="Script" path="res://Scripts/Resources/NPCInfoResource.cs" id="2_01787"]
+[ext_resource type="Texture2D" uid="uid://fvir8m0b38rb" path="res://Art/bountiful/Creatures.png" id="3_y7s3c"]
+
+[sub_resource type="Resource" id="Resource_t3mpf"]
+script = ExtResource("1_7jwiu")
+ExportedData = Array[PackedStringArray]([PackedStringArray("Oh woe is me! I was once the king of Crowrook Castle.", "I ruled fairly and justly, and all the people of Townsville loved me.", "But yesterday, a dragon flew into the castle and turned me into a walrus!", "I didn\'t even know dragons exist, much less that they can turn people into walruses!", "If only the hero of ancient legend were here to slay the terrible lizard..."), PackedStringArray("I accidentally ticked off the dragon and it turned me into a walrus...", "Pro tip: if you\'re going to call the dragon an \'oversized horse-faced snake\', do it WELL out of earshot.", "But a knight\'s duty to protect their liege still applies even as a walrus...", "...unless, of course... an aspiring adventurer were to, say, defeat this dragon...", "...", "I\'m talking to you!!!!", "Hmm, but wielding a sword like that... might make things difficult...", "I\'m gonna let you in on a little secret... let me whisper it in your ear...", "...there\'s a mystical sword hidden somewhere in the forest. Saw it on patrol a few years back.", "I\'m pretty sure no one else but me knows about this...", "I was planning on nabbing it myself on one of my days off, but...", "I guess things never pan out how you expect, huh?", "I\'m counting on you!!! Hero!!!!")])
+useQuotes = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kb20f"]
+atlas = ExtResource("3_y7s3c")
+region = Rect2(40, 110, 10, 10)
+
+[resource]
+script = ExtResource("2_01787")
+name = "walrus"
+displayName = "Walrus"
+killName = ""
+power = 80
+displayPower = false
+texture = SubResource("AtlasTexture_kb20f")
+color = Color(0.572549, 0.6, 0.572549, 1)
+hurtColor = Color(1, 1, 1, 1)
+dialog = SubResource("Resource_t3mpf")

@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="NPCInfoResource" load_steps=6 format=3 uid="uid://d2vk36quqkenb"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/DialogStorageResource.cs" id="1_hlbt0"]
+[ext_resource type="Script" path="res://Scripts/Resources/NPCInfoResource.cs" id="2_uraen"]
+[ext_resource type="Texture2D" uid="uid://s85q3w5gwtge" path="res://Art/bount-white/Creatures.png" id="3_dxkqr"]
+
+[sub_resource type="Resource" id="Resource_gkry7"]
+script = ExtResource("1_hlbt0")
+ExportedData = Array[PackedStringArray]([PackedStringArray("I wonder what the world is like beyond this graveyard...", "What do you mean, \'just float through the fence\'???", "That\'s not how ghosts work!!!", "...right?"), PackedStringArray("Ghouls night!!!!! Whoooooo!!!"), PackedStringArray("I\'m sure you\'re wondering, how are ghosts made?", "Well, when two ghouls love each other very much..."), PackedStringArray("Wheeeeee!!! I love floating through the air and passing through solid objects!!!", "Being a ghost rules!!!!!!"), PackedStringArray("BOOOO! Haha just kidding", "We like to joke around in this graveyard.", "What\'s that? You\'re planning on taking on a dragon? You don\'t have a GHOST of a chance!", "Sorry, I have a ghoulish sense of humor...", "hehe"), PackedStringArray("I fucking hate this guy."), PackedStringArray("Oh, hello great hero! I haven\'t seen you in a while!", "What\'s with the dinky little sword? Did you lose your old one in the forest?", "Wait a second, you\'re not the hero!!!", "Oh, I\'m so embarrased...")])
+useQuotes = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1k8rp"]
+atlas = ExtResource("3_dxkqr")
+region = Rect2(120, 60, 10, 10)
+
+[resource]
+script = ExtResource("2_uraen")
+name = "ghost"
+displayName = "Ghost"
+killName = ""
+power = 66
+displayPower = true
+texture = SubResource("AtlasTexture_1k8rp")
+color = Color(1, 1, 1, 1)
+hurtColor = Color(0.682353, 0.215686, 0.215686, 1)
+dialog = SubResource("Resource_gkry7")

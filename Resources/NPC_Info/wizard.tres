@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="NPCInfoResource" load_steps=6 format=3 uid="uid://bd7ivggn4f5qy"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/DialogStorageResource.cs" id="1_l0a0x"]
+[ext_resource type="Script" path="res://Scripts/Resources/NPCInfoResource.cs" id="2_xdxyw"]
+[ext_resource type="Texture2D" uid="uid://s85q3w5gwtge" path="res://Art/bount-white/Creatures.png" id="3_qd5fx"]
+
+[sub_resource type="Resource" id="Resource_uwm38"]
+script = ExtResource("1_l0a0x")
+ExportedData = Array[PackedStringArray]([PackedStringArray("Begone, foolish hero! You cannot defeat me, for I am the Grand Archmage Dusolt of the Vile Tower!", "My mastery of the arcane is unparalleled! Reality reshapes itself to my whim!", "No mere country bumpkin who just rolled out of bed could ever hope to defeat me!", "You shall never obtain the Key of Yendor and unseal the ancient blade, which slumbers deep in the forest!", "...I may have said too much with that last line. Forget what I just said!", "Mind Blank! Modify Memory! Inflict Temporary Amnesia!", "Actually, make that Inflict PERMANENT Amnesia!", "...I forgot what we were talking about.")])
+useQuotes = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_641qx"]
+atlas = ExtResource("3_qd5fx")
+region = Rect2(130, 30, 10, 10)
+
+[resource]
+script = ExtResource("2_xdxyw")
+name = "wizard"
+displayName = "Wizard"
+killName = ""
+power = 34
+displayPower = true
+texture = SubResource("AtlasTexture_641qx")
+color = Color(0.878431, 0.352941, 0.819608, 1)
+hurtColor = Color(1, 1, 1, 1)
+dialog = SubResource("Resource_uwm38")

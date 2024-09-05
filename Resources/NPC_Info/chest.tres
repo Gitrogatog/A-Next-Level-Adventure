@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="NPCInfoResource" load_steps=6 format=3 uid="uid://d15mow5xwtki"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/DialogStorageResource.cs" id="1_0g3xp"]
+[ext_resource type="Script" path="res://Scripts/Resources/NPCInfoResource.cs" id="2_apxp1"]
+[ext_resource type="Texture2D" uid="uid://s85q3w5gwtge" path="res://Art/bount-white/Creatures.png" id="3_e50oj"]
+
+[sub_resource type="Resource" id="Resource_ug35t"]
+script = ExtResource("1_0g3xp")
+ExportedData = Array[PackedStringArray]([PackedStringArray("The chest is locked.")])
+useQuotes = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_leinc"]
+atlas = ExtResource("3_e50oj")
+region = Rect2(111, 0, 9, 10)
+margin = Rect2(1, 0, 0, 0)
+filter_clip = true
+
+[resource]
+script = ExtResource("2_apxp1")
+name = "chest"
+displayName = "Chest"
+killName = ""
+power = 35
+displayPower = false
+texture = SubResource("AtlasTexture_leinc")
+color = Color(0.635294, 0.380392, 0.203922, 1)
+hurtColor = Color(1, 1, 1, 1)
+dialog = SubResource("Resource_ug35t")

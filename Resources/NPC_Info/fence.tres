@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="NPCInfoResource" load_steps=6 format=3 uid="uid://caef5e1woi6th"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/DialogStorageResource.cs" id="1_hsklf"]
+[ext_resource type="Script" path="res://Scripts/Resources/NPCInfoResource.cs" id="2_s6iu5"]
+[ext_resource type="Texture2D" uid="uid://s85q3w5gwtge" path="res://Art/bount-white/Creatures.png" id="3_ien66"]
+
+[sub_resource type="Resource" id="Resource_3bk3f"]
+script = ExtResource("1_hsklf")
+ExportedData = Array[PackedStringArray]([PackedStringArray("")])
+useQuotes = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vrese"]
+atlas = ExtResource("3_ien66")
+region = Rect2(30, 120, 10, 10)
+
+[resource]
+script = ExtResource("2_s6iu5")
+name = "fence"
+displayName = "Fence"
+killName = ""
+power = 0
+displayPower = false
+texture = SubResource("AtlasTexture_vrese")
+color = Color(0.745098, 0.768627, 0.733333, 1)
+hurtColor = Color(1, 1, 1, 1)
+dialog = SubResource("Resource_3bk3f")

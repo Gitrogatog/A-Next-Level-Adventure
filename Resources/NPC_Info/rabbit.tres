@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="NPCInfoResource" load_steps=6 format=3 uid="uid://diqcatbhab0we"]
+
+[ext_resource type="Script" path="res://Scripts/Resources/DialogStorageResource.cs" id="1_5ydjb"]
+[ext_resource type="Script" path="res://Scripts/Resources/NPCInfoResource.cs" id="2_rhvd7"]
+[ext_resource type="Texture2D" uid="uid://s85q3w5gwtge" path="res://Art/bount-white/Creatures.png" id="3_22p1p"]
+
+[sub_resource type="Resource" id="Resource_7nfn7"]
+script = ExtResource("1_5ydjb")
+ExportedData = Array[PackedStringArray]([PackedStringArray("The rabbit hops around and nibbles at the grass.")])
+useQuotes = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xjig7"]
+atlas = ExtResource("3_22p1p")
+region = Rect2(20, 0, 10, 10)
+
+[resource]
+script = ExtResource("2_rhvd7")
+name = "rabbit"
+displayName = "Rabbit"
+killName = ""
+power = 3
+displayPower = true
+texture = SubResource("AtlasTexture_xjig7")
+color = Color(0.635294, 0.380392, 0.203922, 1)
+hurtColor = Color(1, 1, 1, 1)
+dialog = SubResource("Resource_7nfn7")
