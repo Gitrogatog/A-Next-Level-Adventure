@@ -11,3 +11,6 @@
 - Tile art from Bountiful Bits by VEXED (<https://v3x3d.itch.io/bountiful-bits> and <https://v3x3d.itch.io/bit-bonanza>)
 - UI from Frames 1-bit by PiiiXL (<https://piiixl.itch.io/frames-1-bit>)
 - Font from monogram by datagoblin: <https://datagoblin.itch.io/monogram>
+Parts of the code were inspired by these tutorials, check them out if you want to see some better code:
+- prophet goddess's shmup tutorial: <https://blood.church/posts/2023-09-25-shmup-tutorial>
+- Herbert Wolverson's Bevy Roguelike series: <https://bfnightly.bracketproductions.com/rustbook/>
