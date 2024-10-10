@@ -6,7 +6,7 @@
 
 [sub_resource type="Resource" id="Resource_ug35t"]
 script = ExtResource("1_316u1")
-ExportedData = Array[PackedStringArray]([PackedStringArray("Welcome to Monster Town! As you can see, the exit is to the east, so USE IT!"), PackedStringArray("Hint: The best way to deal with monsters is to lie face down on the floor in front of them."), PackedStringArray("Monsters rule, humans drool!!!"), PackedStringArray("Hint: There is no way to defeat the wizard who controls these caves, so give up already!"), PackedStringArray("There is no Key of Yendor."), PackedStringArray("This cave is claimed by the glorious gleegox empire! Surrender or be annihilated!!!")])
+ExportedData = Array[PackedStringArray]([PackedStringArray("Welcome to Monster Town! As you can see, the exit is to the east, so USE IT!"), PackedStringArray("Hint: The best way to deal with monsters is to lie face down on the floor in front of them."), PackedStringArray("Monsters rule, humans drool!!!"), PackedStringArray("Hint: There is no way to defeat the wizard who controls these caves, so give up already!"), PackedStringArray("There is no Key of Yendor."), PackedStringArray("This cave is claimed by the glorious gleegox empire! Surrender or be annihilated!!!"), PackedStringArray("We\'ve locked this path up tight!!! Good luck getting the sword now stupid humans!!!!!", "Just try to take the Key of Yendor from us, if you dare!!!!!", "Signed the Monsters of Monster Town")])
 useQuotes = false
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_leinc"]

@@ -1,6 +1,6 @@
 namespace MyECS.Prefabs;
-using Godot;
 using System;
+using Godot;
 using MoonTools.ECS;
 using MyECS.Components;
 using MyECS.Messages;

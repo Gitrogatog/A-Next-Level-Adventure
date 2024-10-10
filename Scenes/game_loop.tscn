@@ -176,13 +176,13 @@ atlas = ExtResource("8_338wm")
 region = Rect2(0, 0, 10, 10)
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_bssyy"]
-color = Color(0.00392157, 0.227451, 0.388235, 1)
+color = Color(0.133333, 0.176471, 0.419608, 1)
 grow_begin = -1.0
 grow_end = -1.0
 thickness = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fg4ae"]
-bg_color = Color(0.380392, 0.647059, 0.760784, 1)
+bg_color = Color(0, 0.486275, 0.960784, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n7dpt"]
 bg_color = Color(0.380392, 0.647059, 0.760784, 1)
@@ -311,6 +311,7 @@ offset_right = 157.0
 offset_bottom = 133.0
 scale = Vector2(3, 3)
 theme_override_fonts/normal_font = ExtResource("6_onl01")
+text = "gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg"
 scroll_active = false
 
 [node name="ExtraDialog" type="Control" parent="Display/NPCUI"]
@@ -323,14 +324,15 @@ scale = Vector2(2, 2)
 
 [node name="Background" type="ColorRect" parent="Display/NPCUI/ExtraDialog"]
 layout_mode = 0
+offset_left = -13.0
 offset_top = 20.0
-offset_right = 40.0
+offset_right = 47.0
 offset_bottom = 40.0
 color = Color(0.0666667, 0.0666667, 0.0666667, 1)
 
 [node name="Anim" type="AnimatedSprite2D" parent="Display/NPCUI/ExtraDialog"]
-position = Vector2(20, 20)
-scale = Vector2(2, 2)
+position = Vector2(13, 18.5)
+scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_qhwb7")
 animation = &"play"
 autoplay = "play"
@@ -413,9 +415,9 @@ patch_margin_bottom = 8
 
 [node name="Sword" type="TextureRect" parent="Display/Inventory"]
 layout_mode = 0
-offset_left = 40.0
+offset_left = 50.0
 offset_top = 20.0
-offset_right = 90.0
+offset_right = 100.0
 offset_bottom = 70.0
 texture = SubResource("AtlasTexture_d2cfm")
 
@@ -430,12 +432,13 @@ offset_bottom = 127.0
 texture_filter = 1
 layout_mode = 0
 offset_left = -31.0
-offset_top = 16.0
+offset_top = 3.0
 offset_right = 49.0
-offset_bottom = 56.0
+offset_bottom = 43.0
 scale = Vector2(2, 2)
 theme_override_fonts/normal_font = ExtResource("6_onl01")
-text = "Fast Mode:"
+text = "Fast Mode:
+Click Me!"
 scroll_active = false
 
 [node name="ColorRect" type="ColorRect" parent="Display/Inventory/FastMode"]
@@ -444,7 +447,7 @@ offset_left = 96.0
 offset_top = 12.0
 offset_right = 136.0
 offset_bottom = 52.0
-color = Color(0.572549, 0.6, 0.572549, 1)
+color = Color(0.607843, 0.635294, 0.607843, 1)
 
 [node name="CheckButton" type="CheckBox" parent="Display/Inventory/FastMode"]
 layout_mode = 0

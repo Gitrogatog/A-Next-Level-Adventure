@@ -1,6 +1,7 @@
 namespace MyECS.Components;
-using Godot;
 using System;
+using System.Runtime.InteropServices;
+using Godot;
 using MoonTools.ECS;
 
 // enums

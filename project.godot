@@ -21,7 +21,7 @@ config/windows_native_icon="res://Art/characters/player_isolated.ico"
 
 window/size/viewport_width=1060
 window/size/viewport_height=480
-window/size/resizable=false
+window/stretch/mode="viewport"
 
 [dotnet]
 
