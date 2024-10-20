@@ -311,7 +311,6 @@ offset_right = 157.0
 offset_bottom = 133.0
 scale = Vector2(3, 3)
 theme_override_fonts/normal_font = ExtResource("6_onl01")
-text = "gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg"
 scroll_active = false
 
 [node name="ExtraDialog" type="Control" parent="Display/NPCUI"]

@@ -6,7 +6,7 @@
 
 [sub_resource type="Resource" id="Resource_qwhoy"]
 script = ExtResource("1_r4kvu")
-ExportedData = Array[PackedStringArray]([PackedStringArray("You found a magic battle axe!", "But you use swords, not axes... this would completely mess up your build.", "You try picking it up... you can hardly even lift it!", "You check the weapon requirements... 25 Strength??? How the hell are you supposed to get it that high???")])
+ExportedData = Array[PackedStringArray]([PackedStringArray("You found a magic battle axe!", "But you use swords, not axes... this would completely mess up your build.", "You try picking it up... you can hardly even lift it!", "You check the weapon requirements... 80 Strength??? How the hell are you supposed to get it that high???")])
 useQuotes = false
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g0acx"]
@@ -18,7 +18,7 @@ script = ExtResource("2_045yl")
 name = "axe"
 displayName = "Battle Axe"
 killName = ""
-power = 100
+power = 80
 displayPower = false
 texture = SubResource("AtlasTexture_g0acx")
 color = Color(1, 1, 1, 1)
